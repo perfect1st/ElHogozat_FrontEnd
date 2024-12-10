@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Footer from '../Footer/Footer';
 import styles from './Login.module.css'; 
 import { useNavigate } from 'react-router-dom'; 
-
+import TabsComponent from '../Categories/TabsComponent/TabsComponent'
 const Login = () => {
   const navigate = useNavigate();
   const [phoneNumber, setPhoneNumber] = useState('+966');
@@ -33,6 +33,7 @@ const Login = () => {
   return (
     <div className={styles.loginContainer}>
       <div className={styles.loginContent}>
+        {/* <TabsComponent /> */}
         {/* <div className={styles.loginHeader}>تسجيل دخول</div> */}
         <div>
           <div className={styles.inputContainer}>

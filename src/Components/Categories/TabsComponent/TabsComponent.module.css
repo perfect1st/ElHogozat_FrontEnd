@@ -1,0 +1,19 @@
+.tabsContainer {
+  display: flex;
+  justify-content: flex-start; /* Align tabs to the left */
+  direction: rtl;
+  height: 50px;
+}
+
+.tab {
+  width: 157.67px;
+  padding: 10px 20px;
+  border-radius: 50px 0 0 50px;
+  cursor: pointer;
+  text-align: center;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  font-size: 16px;
+  margin-right: -20px; /* Add negative margin to overlap */
+}
+
+
