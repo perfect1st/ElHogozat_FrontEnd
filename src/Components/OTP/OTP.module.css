@@ -1,0 +1,173 @@
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0;
+  color: #3D3D3D;
+}
+
+.loginHeader {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  color: #3D3D3D;
+}
+.mainContainer{
+  width: 996px;
+  height: 574px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.enterOtpLapel{
+  font-size: 32px;
+  font-weight: 600;
+  direction: rtl;
+  /* margin-right: 20%; */
+  color: #3D3D3D;
+  padding: 0 20px 0 0;
+}
+.mobileNumberContainer{
+  /* margin-right: 20%; */
+  display: flex;
+  direction: rtl;
+  margin-bottom: 20px;
+}
+.mobileNumber{
+  font-size: 24px;
+  font-weight: 500;
+  direction: rtl;
+  color: #3D3D3D;
+  padding: 0 20px 0 0;
+  /* margin-right: 20%; */
+}
+
+.editNumber{
+  font-size: 24px;
+  font-weight: 500;
+  direction: rtl;
+  color: #0066BA;
+  text-decoration: underline;
+  cursor: pointer;
+  /* margin-right: 20%; */
+}
+
+.otpContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #D1D1D1;
+  width: 716px;
+  height: 112px;
+  margin: auto;
+  border-radius: 8px;
+}
+
+.otpInput {
+  width: 120px;
+  height: 70px;
+  font-size: 24px;
+  text-align: center;
+  border: 2px solid #D1D1D1;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+  background: #E8E8E8;
+}
+
+.otpInput:focus {
+  border-color: #B49345;
+  box-shadow: 0 0 5px rgba(180, 147, 69, 0.5);
+}
+
+
+
+.onSubmit{
+  height: 60px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 44.98px;
+  cursor: pointer;
+  background: #B49345;
+  color: #FCFCFC;
+  width: 100%; 
+  max-width: 954px;
+ 
+  margin: 0 auto;
+}
+@media (max-width: 1024px) {
+
+  .mainContainer{
+    width: 697.2px;
+    height: 401.8px;
+  }
+  .enterOtpLapel{
+    font-size: 24px;
+  }
+  .mobileNumber,
+.editNumber{
+  font-size: 15px;
+}
+.otpContainer {
+
+  width: 501.2px;
+  height: 78.4px;
+
+}
+.otpInput {
+  width: 84px;
+  height: 49px;
+  font-size: 15px;
+
+}
+.onSubmit{
+  height: 50px;
+  max-width: 667.8px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.footerContainer{
+  position: static;
+}
+}
+@media (max-width: 700px) {
+
+  .mainContainer{
+    width: 348.6px;
+    height: 400px;
+  }
+  .footerContainer{
+    position: absolute;
+  }
+  .enterOtpLapel{
+    font-size: 16px;
+  }
+  .mobileNumber,
+.editNumber{
+  font-size: 12px;
+}
+.otpContainer {
+
+  width: 250.6px;
+  height: 39.2px;
+
+}
+.otpInput {
+  width: 42px;
+  height: 24.5px;
+  font-size: 12px;
+
+}
+.onSubmit{
+  height: 40px;
+  max-width: 333.9px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+}

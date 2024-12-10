@@ -1,0 +1,126 @@
+/* NavBar.css */
+.navbar {
+  background-color: white;
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  direction: rtl;
+  padding: 0 20px;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 16px;
+  color: #747475;  /* Text color */
+  transition: border-bottom 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #B49345;  /* Color on hover */
+  border-bottom: 2px solid #B49345;  /* Bottom border color */
+}
+
+.nav-link.active {
+  color: #B49345;  /* Active link color */
+  border-bottom: 2px solid #B49345;  /* Active link bottom border */
+}
+
+.nav-link-styles {
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 29.98px;
+}
+
+.logo-image {
+  width: 100px;
+  height: 77.94px;
+}
+.icon {
+  width: 30px;
+  height: 31px;
+}
+
+.nav-links-container {
+  display: flex;
+}
+
+.burger-button {
+  display: none; /* Show burger button */
+}
+
+@media (max-width: 1000px) {
+  .nav-links{
+    font-size: 14px;
+  }
+  .logo-image {
+    width: 80px;
+    height: 65px;
+  }
+  .icon {
+    width: 28px;
+    height: 29px;
+  }
+}
+@media (max-width: 880px) {
+  .nav-links{
+    font-size: 12px;
+  }
+  .logo-image {
+    width: 60px;
+    height: 55px;
+  }
+  .icon {
+    width: 24px;
+    height: 25px;
+  }
+}
+
+
+@media (max-width: 780px) {
+  .burger-button {
+    display: block; /* Show burger button */
+  }
+
+  .nav-links-container {
+    display: none; /* Hide links by default */
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Adjust position below navbar */
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .nav-links-container.open {
+    display: flex; /* Show links when burger menu is clicked */
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
+}
+
+
+

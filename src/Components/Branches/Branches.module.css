@@ -1,0 +1,75 @@
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #3D3D3D;
+}
+
+.loginHeader {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  color: #3D3D3D;
+}
+.chooseBranchLabel{
+ font-weight: 600;
+ font-size: 20px;
+ line-height: 37.48px;
+ color: #747475;
+ display: flex;
+ justify-content: center;
+
+}
+
+
+
+
+.cardContainer {
+  display: flex;
+  flex-direction: row; /* Arrange items in a row */
+  justify-content: flex-start;
+  align-items: center;
+  background: #B49346;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 394px;
+  height: 120px;
+  padding: 16px;
+  margin: 12px;
+  text-align: right; /* Align text to the right */
+  transition: transform 0.3s ease-in-out;
+  direction: rtl;
+}
+
+.cardContainer:hover {
+  transform: translateY(-5px);
+}
+
+.cardImage {
+  width: 117px;
+  height: 88px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-left: 16px; /* Adds spacing between content and image */
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align text to the left */
+  margin-right: 15px;
+}
+
+.cityName {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+  color: #E8E8E8; /* White text for better contrast */
+}
+
+.branchName {
+  font-size: 20px;
+  font-weight: 400;
+  color: #E8E8E8; /* Lighter text for the branch name */
+  /* margin: 8px 0 0; */
+}
