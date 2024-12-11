@@ -117,7 +117,7 @@ function Branches() {
       ))}
     </div>
     <div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
     </div>
   )

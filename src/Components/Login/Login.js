@@ -24,12 +24,14 @@ const Login = () => {
   const handleSubmit = () => {
     const fullPhoneNumber = `+966${phoneNumber}`;
     console.log('Phone number submitted:', fullPhoneNumber);
+    navigate('/otp')
   };
 
 
   const handleNavigateToSignup = () => {
     navigate('/signup');
   };
+
   return (
     <div className={styles.loginContainer}>
       <div className={styles.loginContent}>
@@ -68,7 +70,7 @@ const Login = () => {
         </div>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

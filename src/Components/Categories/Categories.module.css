@@ -1,0 +1,13 @@
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.loginHeader {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}

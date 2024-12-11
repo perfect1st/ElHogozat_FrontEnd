@@ -10,7 +10,7 @@ const Footer = () => {
   
 
   return (
-    <div className={`footer ${'visible'}`}>
+    <div className={`footer ${'visible'}`} style={{position:"relative", bottom:"0"}}>
       <div className="footer-content">
         <div className='logo'>
           <img src={myImage} alt="Company Logo" className='logo-image2' style={{ borderRadius: "8px" }} />

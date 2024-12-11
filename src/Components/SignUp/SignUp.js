@@ -3,10 +3,12 @@ import styles from "./SignUp.module.css"; // Import CSS Module styles
 import { BsGenderFemale } from "react-icons/bs";
 import myImage from "../../Images/calendar-edit.svg";
 import Footer from "../Footer/Footer";
+import { useNavigate } from "react-router-dom";
 
 function SignUp() {
   const dateInputRef = useRef(null);
 
+  const navigate = useNavigate();
   const openDatePicker = () => {
     if (dateInputRef.current) {
       dateInputRef.current.showPicker(); // Trigger the calendar
@@ -30,6 +32,7 @@ const onSubmit = () =>{
     date:date
   }
   console.log("data",data)
+  navigate('/otp')
 }
   
   const handleChange = (event) => {
@@ -220,7 +223,7 @@ const onSubmit = () =>{
           <div className={styles.onSubmit} onClick={onSubmit}>إرسال</div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

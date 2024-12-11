@@ -9,7 +9,7 @@ const SearchComponent = ({
   placeholder = "بحث...",
   noOptionsMessage = "لا توجد نتائج", // Default message
   isMulti = false,
-  isClearable = true,
+  isClearable = false,
   defaultValue = null,
   labelForOption = 'label',
   valueForOption = 'value',
@@ -34,6 +34,24 @@ const SearchComponent = ({
       paddingRight: '10px',
       height: '52px',
     }),
+
+    option: (provided, state) => ({
+      ...provided,
+      backgroundColor: state.isSelected
+        ? '#B49345' // Background for selected option
+        : state.isFocused
+        ? '#F3F3F3' // Background for focused option (hover state)
+        : 'white', // Default background
+      color: state.isSelected ? 'white' : '#333', // Text color for selected option
+      textAlign: 'right',
+      padding: '10px',
+      cursor: 'pointer',
+      '&:hover': {
+        backgroundColor: '#F3F3F3', // Background on hover
+        color: '#333',
+      },
+    }),
+    
     dropdownIndicator: () => ({
       display: 'none', // Remove the dropdown arrow
     }),

@@ -92,12 +92,12 @@ const OTP = () => {
         <div className={styles.mobileNumber}>{formatTime(time)} </div>
         <div className={styles.editNumber} disabled={isResendDisabled}   style={{cursor: isResendDisabled ? 'not-allowed' : 'pointer', }} onClick={handleResendClick} >إعادة الإرسال</div>
          </div>
-         <div className={styles.onSubmit} >إرسال</div>
+         <div className={styles.onSubmit} onClick={()=>{navigate('/home')}} >إرسال</div>
 
     </div>
-    <div  className={styles.footerContainer} style={{marginTop:"20px", bottom:"0"}}>
+    {/* <div  className={styles.footerContainer} style={{marginTop:"20px", bottom:"0"}}>
       <Footer />
-      </div>
+      </div> */}
     </div>
    
   );
