@@ -1,10 +1,14 @@
 import React from "react";
 import styles from './Branches.module.css'; 
+import { useNavigate } from "react-router-dom";
 
 const BranchCard = ({ cityName, branchName, photo, branch }) => {
+  const navigate = useNavigate();
 
   const handleCardClick = () => {
     console.log("his data", branch); // Logs the branch data when the card is clicked
+    navigate("/sections")
+    
   };
 
   return (

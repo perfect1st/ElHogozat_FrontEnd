@@ -11,6 +11,7 @@ import CategoriesPage from './Pages/CategoriesPage/CategoriesPage'
 
 import './App.css';
 import ServiesPage from './Pages/ServiesPage/ServiesPage';
+import ServiceProvidersPage from './Pages/ServiceProvidersPage/ServiceProvidersPage';
 import Details from './Components/Servies/Details';
 
 function App() {
@@ -30,8 +31,9 @@ function App() {
       <Route path="/otp" element={<OtpPage />} />
       <Route path="/home" element={<BranchesPage />} />
       <Route path="/sections" element={<CategoriesPage />} />
-      <Route path="/servies" element={<ServiesPage />} />
+      <Route path="/services" element={<ServiesPage />} />
       <Route path="/details" element={<Details />} />
+      <Route path="/serviceproviders" element={<ServiceProvidersPage />} />
 
 
       </Routes>

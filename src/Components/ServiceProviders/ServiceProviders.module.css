@@ -1,0 +1,247 @@
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0;
+  
+}
+
+.loginHeader {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Spacing between cards */
+  justify-content: center; /* Center cards horizontally */
+  margin: 20px;
+  animation: fadeIn 1s ease-in-out; /* Container fade-in animation */
+  max-width: 900px;
+  margin: 25px auto;
+  direction: rtl;
+}
+
+.card {
+  width: 205px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow */
+  animation: slideUp 0.6s ease-in-out;
+  background-color: #B49345;
+
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05); /* Slightly lifts the card on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds deeper shadow */
+}
+
+.cardImage {
+  width: 197px;
+  height: 155px;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.cardLabel {
+  background-color: #B49345;
+  color: #E8E8E8;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+    justify-content: space-between;
+    margin: auto 10px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide-up animation for cards */
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* -------- details ------------ */
+.DetailsLabel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 700;
+  padding: 20px;
+}
+.DetailsComponant {
+  width: 916px;
+  height: auto;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px #D1D1D1 solid;
+  direction: rtl;
+  margin: auto;
+}
+
+.DetailsComponant h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: right; /* Align text to the right */
+  color: #3D3D3D;
+}
+
+.detailsContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 20px;
+  color: #3D3D3D;
+line-height: 37.48px;
+
+}
+
+.detailsContent h2 {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 20px;
+  color: #3D3D3D;
+  line-height: 37.48px;
+  
+
+}
+
+.priceContainer {
+  display: flex;
+  justify-content: space-between; /* Space between السعر and cardData.price */
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.priceContainer span:first-child {
+  color: #3D3D3D;
+
+}
+
+.priceContainer span:last-child {
+  color: #B49345;
+}
+
+.onSubmit{
+  height: 60px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 44.98px;
+  cursor: pointer;
+  background: #B49345;
+  color: #FCFCFC;
+  width: 100%; 
+  max-width: 462px;
+ 
+  margin: 20px auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 950px) {
+  .DetailsComponant {
+    width: 640px;
+    height: auto;
+    padding: 15px;
+  }
+
+  .DetailsComponant h1 {
+    font-size: 24px;
+  }
+  .detailsContent h2 {
+    font-size: 16px;
+  }
+
+  .priceContainer {
+    font-size: 14px;
+  }
+  .onSubmit{
+    height: 40px;
+    max-width: 333.9px;
+    font-weight: 500;
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .DetailsComponant {
+    width: 448px;
+    height: auto;
+    padding: 15px;
+  }
+
+  .DetailsComponant h1 {
+    font-size: 24px;
+  }
+
+  .detailsContent h2 {
+    font-size: 16px;
+  }
+
+  .priceContainer {
+    font-size: 14px;
+  }
+  .onSubmit{
+    height: 40px;
+    max-width: 333.9px;
+    font-weight: 500;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .DetailsComponant {
+    width: 330px;
+    height: auto;
+    padding: 10px;
+  }
+
+  .DetailsComponant h1 {
+    font-size: 20px;
+  }
+
+  .detailsContent h2 {
+    font-size: 14px;
+  }
+
+  .priceContainer {
+    font-size: 12px;
+  }
+  .onSubmit{
+    height: 40px;
+    max-width: 300.9px;
+    font-weight: 500;
+    font-size: 12px;
+  }
+}

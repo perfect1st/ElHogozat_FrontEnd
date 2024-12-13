@@ -19,14 +19,17 @@ const TabsComponent = ({externalTab}) => {
     if (selectedTab === 0) {
       navigate('/sections');
     } else if (selectedTab === 1) {
-      navigate('/servies');
+      navigate('/services'); // Fixed typo
     } else if (selectedTab === 2) {
-      navigate('/agants');
+      navigate('/serviceproviders');
     } else if (selectedTab === 3) {
       navigate('/time');
     }
   }, [selectedTab, navigate]);
+  
 
+  console.log("selectedTabinTabsComponant",selectedTab)
+  console.log("externalTabinTabsComponant",externalTab)
   useEffect(() => {
     if (externalTab !== undefined) {
       setSelectedTab(externalTab);
