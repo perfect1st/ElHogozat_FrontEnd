@@ -12,6 +12,14 @@
   font-weight: 700;
   text-align: center;
 }
+.loginSecHeader{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 37.48px;
+  color: #747475;
+  margin: auto;
+}
+
 .cardContainer {
   display: flex;
   flex-wrap: wrap;
@@ -58,8 +66,8 @@
   font-size: 14px;
   font-weight: bold;
   display: flex;
-    justify-content: space-between;
-    margin: auto 10px;
+  justify-content: center;
+      margin: auto 10px;
 }
 
 /* Fade-in animation */

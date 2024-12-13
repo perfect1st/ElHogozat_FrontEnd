@@ -4,9 +4,12 @@ import image1 from '../../Images/1.png'
 import image2 from '../../Images/2.png'
 import image3 from '../../Images/3.png'
 import image4 from '../../Images/4.png'
+import { useNavigate } from 'react-router-dom';
 
 const Categories = ({onCardClick}) => {
   // Array of card data
+  const navigate = useNavigate(); // Import navigate hook
+
   const cards = [
     { id: 1, image: image1, label: 'Spa' },
     { id: 2, image: image2, label: 'كوافير' },
@@ -19,8 +22,9 @@ const Categories = ({onCardClick}) => {
 
   ];
 const onSubmit = (card) =>{
-  onCardClick(1)
-  console.log("card",card)
+    console.log("card", card);
+    navigate('/services?tab=1'); // Navigate to /services?tab=1
+    console.log("card",card)
 }
   return (
     <div className={styles.cardContainer} >

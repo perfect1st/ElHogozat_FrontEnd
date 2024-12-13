@@ -138,6 +138,7 @@ const ServiesPage = () => {
       </div>
     <div className={styles.loginContainer}>
     <div className={styles.loginHeader}>الخدمات</div>
+    <div className={styles.loginSecHeader}>تصفح في الخدمات المميزه و المتخصصه</div>
 
       </div>
 

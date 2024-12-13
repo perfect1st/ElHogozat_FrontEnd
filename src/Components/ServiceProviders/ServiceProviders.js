@@ -10,18 +10,20 @@ const ServiceProviders = ({onCardClick}) => {
   // Array of card data
   const navigate = useNavigate();
   const cards = [
-    { id: 1, image: image1, label: 'Spa' , price:"200 R.S"},
-    { id: 2, image: image2, label: 'كوافير', price:"200 R.S" },
-    { id: 3, image: image3, label: 'العناية بالبشرة ' , price:"200 R.S" },
-    { id: 4, image: image4, label: 'مساج' , price:"200 R.S"},
-    { id: 5, image: image3, label: 'العناية بالبشرة ', price:"200 R.S" },
-    { id: 6, image: image4, label: 'مساج' , price:"200 R.S"},
-    { id: 7, image: image2, label: 'كوافير' , price:"200 R.S"},
-    { id: 8, image: image1, label: 'Spa' , price:"200 R.S" },
-
+    { id: 1, image: image1, label: 'محمد احمد علي' },
+    { id: 2, image: image1, label: 'خالد حسن إبراهيم' },
+    { id: 3, image: image1, label: 'علي محمود عمر' },
+    { id: 4, image: image1, label: 'يوسف عبد الله صالح' },
+    { id: 5, image: image1, label: 'سعيد محمد ناصر' },
+    { id: 6, image: image1, label: 'عمر عبد الرحمن يوسف' },
+    { id: 7, image: image1, label: 'إبراهيم خالد فؤاد' },
+    { id: 8, image: image1, label: 'فهد حسن سعيد' },
+    { id: 9, image: image1, label: 'طارق يوسف أحمد' },
+    { id: 10, image: image1, label: 'عبد الله ناصر علي' },
+    { id: 11, image: image1, label: 'حسن فهد محمود' },
+    { id: 12, image: image1, label: 'أحمد سعيد خالد' },
   ];
 const onSubmit = (card) =>{
-  navigate('/serviceproviders', { state: { cardData: card } });
   console.log("card",card)
 }
   return (
@@ -31,7 +33,6 @@ const onSubmit = (card) =>{
           <img src={card.image} alt={card.label} className={styles.cardImage} />
           <div className={styles.cardLabel}>
             <span>{card.label}</span>
-            <span>{card.price}</span>
           </div>
         </div>
       ))}

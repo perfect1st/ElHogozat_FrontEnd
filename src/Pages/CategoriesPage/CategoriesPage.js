@@ -138,6 +138,7 @@ const CategoriesPage = () => {
       </div>
     <div className={styles.loginContainer}>
     <div className={styles.loginHeader}>الأقسام</div>
+    <div className={styles.loginSecHeader}>الأقسام المميزة و المخصصة</div>
 
       </div>
 

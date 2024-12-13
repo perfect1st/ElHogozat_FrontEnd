@@ -138,10 +138,12 @@ const ServiceProvidersPage = () => {
       </div>
     <div className={styles.loginContainer}>
     <div className={styles.loginHeader}>مقدمي الخدمة</div>
+    <div className={styles.loginSecHeader}>الأقسام المميزة و المخصصة</div>
+
 
       </div>
 
-      {/* <ServiceProviders  onCardClick={handleCardClick} /> */}
+      <ServiceProviders  onCardClick={handleCardClick} />
       
     </div>
   )
