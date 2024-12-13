@@ -37,15 +37,21 @@ const SearchComponent = ({
 
     option: (provided, state) => ({
       ...provided,
-      backgroundColor: state.isSelected
-        ? '#B49345' // Background for selected option
-        : state.isFocused
-        ? '#F3F3F3' // Background for focused option (hover state)
-        : 'white', // Default background
-      color: state.isSelected ? 'white' : '#333', // Text color for selected option
+      backgroundColor: state.isFocused
+        ? '#F3F3F3' 
+        : '#B49345',
+      // backgroundColor: state.isSelected
+      //   ? '#B49345' // Background for selected option
+      //   : state.isFocused
+      //   ? '#F3F3F3' // Background for focused option (hover state)
+      //   : 'white', // Default background
+      // color: state.isSelected ? 'white' : '#333', // Text color for selected option
+      color: 'white',
       textAlign: 'right',
       padding: '10px',
       cursor: 'pointer',
+      zIndex:"2000",
+      
       '&:hover': {
         backgroundColor: '#F3F3F3', // Background on hover
         color: '#333',
@@ -72,6 +78,7 @@ const SearchComponent = ({
       ...provided,
       textAlign: 'right',
       borderRadius: '4px 0 0 4px',
+      zIndex:"2000",
     }),
   };
 

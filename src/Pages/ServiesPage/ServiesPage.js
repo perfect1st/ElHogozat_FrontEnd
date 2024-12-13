@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import Categories from '../../Components/Categories/Categories'
 import TabsComponent from '../../Components/Categories/TabsComponent/TabsComponent'
-import styles from '../../Components/Categories/Categories.module.css';  
+import Servies from '../../Components/Servies/Servies'
+import styles from '../../Components/Servies/Servies.module.css'
 import SearchComponent from '../../Components/Utilities/SearchComponent';
 
 
@@ -100,10 +100,10 @@ const branches = [
 
 
 
-const CategoriesPage = () => {
+const ServiesPage = () => {
 
   const [selectedOption, setSelectedOption] = useState(null);
-  const [externalTab, setExternalTab] = useState(0);
+  const [externalTab, setExternalTab] = useState(1);
 
 
   const handleCardClick = (tabIndex) => {
@@ -137,13 +137,13 @@ const CategoriesPage = () => {
    <TabsComponent externalTab={externalTab} />
       </div>
     <div className={styles.loginContainer}>
-    <div className={styles.loginHeader}>الأقسام</div>
+    <div className={styles.loginHeader}>الخدمات</div>
 
       </div>
 
-      <Categories  onCardClick={handleCardClick} />
+      <Servies  onCardClick={handleCardClick} />
       
     </div>
   )
 }
-export default CategoriesPage;
+export default ServiesPage;

@@ -10,6 +10,8 @@ import BranchesPage from './Pages/BranchesPage/BranchesPage'
 import CategoriesPage from './Pages/CategoriesPage/CategoriesPage'
 
 import './App.css';
+import ServiesPage from './Pages/ServiesPage/ServiesPage';
+import Details from './Components/Servies/Details';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
       <Route path="/otp" element={<OtpPage />} />
       <Route path="/home" element={<BranchesPage />} />
       <Route path="/sections" element={<CategoriesPage />} />
+      <Route path="/servies" element={<ServiesPage />} />
+      <Route path="/details" element={<Details />} />
 
 
       </Routes>

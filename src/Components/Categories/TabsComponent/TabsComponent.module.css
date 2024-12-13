@@ -2,11 +2,11 @@
   display: flex;
   justify-content: flex-start; /* Align tabs to the left */
   direction: rtl;
-  height: 50px;
+  height: 70px;
 }
 
 .tab {
-  width: 157.67px;
+  /* width: 157.67px; */
   padding: 10px 20px;
   border-radius: 50px 0 0 50px;
   cursor: pointer;
@@ -14,6 +14,46 @@
   transition: width 0.3s ease, background-color 0.3s ease;
   font-size: 16px;
   margin-right: -25px; /* Add negative margin to overlap */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.Bigtab{
+  width: 315.34px;
+}
+.smalltab{
+  width: 157.67px;
+}
+@media (max-width: 800px) {
+  .tabsContainer{
+    height: 50px;
+  }
+  .tab {
+    /* width: 157.67px; */
+    font-size: 14px;
+    
+  }
+  .Bigtab{
+    width: 220.738px;
+  }
+  .smalltab{
+    width: 110.369px;
+  }
+}
+@media (max-width: 580px) {
+  .tabsContainer{
+    height: 50px;
+  }
+  .tab {
+    /* width: 157.67px; */
+    font-size: 12px;
+    
+  }
+  .Bigtab{
+    width: 100px;
+  }
+  .smalltab{
+    width: 100px;
+  }
+}
 
