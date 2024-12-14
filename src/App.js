@@ -13,6 +13,7 @@ import './App.css';
 import ServiesPage from './Pages/ServiesPage/ServiesPage';
 import ServiceProvidersPage from './Pages/ServiceProvidersPage/ServiceProvidersPage';
 import Details from './Components/Servies/Details';
+import TimePage from './Pages/TimePage/TimePage';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <Route path="/services" element={<ServiesPage />} />
       <Route path="/details" element={<Details />} />
       <Route path="/serviceproviders" element={<ServiceProvidersPage />} />
+      <Route path="/time" element={<TimePage />} />
 
 
       </Routes>

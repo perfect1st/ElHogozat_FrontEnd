@@ -25,6 +25,7 @@ const ServiceProviders = ({onCardClick}) => {
   ];
 const onSubmit = (card) =>{
   console.log("card",card)
+  navigate("/time?tab=3")
 }
   return (
     <div className={styles.cardContainer} >
