@@ -1,0 +1,26 @@
+{
+  "login": "Login",
+  "send":"Send",
+  "signUp": "Sign Up",
+  "phoneNumber":"Phone Number",
+  "home": "Home",
+  "sections": "Sections",
+  "packages": "Packages",
+  "myBookings": "My Bookings",
+  "profile": "Profile",
+  "contactUs": "Contact Us",
+  "termsAndConditions": "Terms and Conditions",
+  "userName":"User Name",
+  "email":"Email",
+  "idNumber":"ID Number",
+  "gender":"Gender",
+  "male":"Male",
+  "female":"Female",
+  "dateOfBirth":"Date of Birth",
+  "OTP":"OTP",
+  "EnterTheSentNumber":"Enter the sent number",
+  "EditNumber":"Edit Number",
+  "SendAgain":"Send Again",
+  "Branches":"Branches"
+
+}

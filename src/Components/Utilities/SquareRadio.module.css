@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  gap: 20px; /* Space between squares */
+}
+
+/* Outer square for the border */
+.outerSquare {
+  width: 40px; /* Outer square size */
+  height: 40px;
+  border: 1px solid #D1D1D1; /* Outer border color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/* Inner square for the input */
+.innerInput {
+  appearance: none; /* Remove default radio appearance */
+  width: 16px; /* Inner square size */
+  height: 16px;
+  border: 2px solid #D1D1D1; /* Border for inner square */
+  box-sizing: border-box;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  background: #E8E8E8;
+}
+
+/* Inner square when selected */
+.innerInput:checked {
+  background-color:#B49345; /* Background when selected */
+  border-color: #c1c1c1; /* Change border color */
+}

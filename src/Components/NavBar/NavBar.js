@@ -3,22 +3,31 @@ import { Link, useLocation } from 'react-router-dom';
 import './NavBar.css';
 import myImage from '../../Images/Logo.png';
 import { FiMenu } from 'react-icons/fi'; // Import hamburger icon
+import { useTranslation } from "react-i18next";
 
 const NavBar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false); // State to toggle the menu
+  const { t, i18n } = useTranslation();
 
   const navLinks = [
-    { to: "/home", label: "الرئيسية" },
-    { to: "/sections", label: "الاقسام" },
-    { to: "/packages", label: "الباقات" },
-    { to: "/bookings", label: "حجوزاتي" },
-    { to: "/profile", label: "الصفحه الشخصيه" },
-    { to: "/contact", label: "تواصل معنا" },
-    { to: "/terms", label: "الشروط والاحكام" },
+    { to: "/home", label: t("home") },
+    { to: "/sections", label: t("sections") },
+    { to: "/packages", label: t("packages") },
+    { to: "/bookings", label: t("myBookings") },
+    { to: "/profile", label: t("profile") },
+    { to: "/contact", label: t("contactUs") },
+    { to: "/terms", label: t("termsAndConditions") },
   ];
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  const currentLanguage = i18n.language; // Get current selected language
+
+  const switchLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+    document.body.dir = lang === 'en' ? 'ltr' : 'rtl';
+  };
 
   return (
     <div className="navbar"
@@ -65,6 +74,35 @@ const NavBar = () => {
 <div className="burger-button" onClick={toggleMenu}>
         <FiMenu size={30} color="#B49345" />
       </div>
+      <div>
+        <button
+          onClick={() => switchLanguage("en")}
+          style={{
+            color: currentLanguage === "en" ? "#B49345" : "#747475",
+            border: "none",
+            background: "transparent",
+            fontWeight: "bold",
+            cursor: "pointer",
+            marginRight: "10px"
+          }}
+        >
+          EN
+        </button>
+        <span style={{color:"#747475"}}>|</span>
+        <button
+          onClick={() => switchLanguage("ar")}
+          style={{
+            color: currentLanguage === "ar" ? "#B49345" : "#747475",
+            border: "none",
+            background: "transparent",
+            fontWeight: "bold",
+            cursor: "pointer"
+          }}
+        >
+          AR
+        </button>
+      </div>
+
     </div>
   );
 };

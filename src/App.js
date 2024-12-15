@@ -1,5 +1,5 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
-import { Suspense, useEffect } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { ToastContainer } from 'react-toastify';
 import LoginPage from './Pages/LoginPage/LoginPage'
 import SignUpPage from './Pages/SignUpPage/SignUpPage'
@@ -14,8 +14,16 @@ import ServiesPage from './Pages/ServiesPage/ServiesPage';
 import ServiceProvidersPage from './Pages/ServiceProvidersPage/ServiceProvidersPage';
 import Details from './Components/Servies/Details';
 import TimePage from './Pages/TimePage/TimePage';
+import { useTranslation } from "react-i18next";
 
 function App() {
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    // Set direction based on language
+    document.body.dir = i18n.language === "ar" ? "rtl" : "ltr";
+  }, [i18n.language]); // Runs when the language changes
+
   return (
     <div className="" style={{overflow:"hidden"}}>
     <BrowserRouter>

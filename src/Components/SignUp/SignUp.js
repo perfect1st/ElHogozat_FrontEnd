@@ -1,40 +1,42 @@
 import React, { useRef, useState } from "react";
-import styles from "./SignUp.module.css"; // Import CSS Module styles
+import styles from "./SignUp.module.css"; 
 import { BsGenderFemale } from "react-icons/bs";
 import myImage from "../../Images/calendar-edit.svg";
 import Footer from "../Footer/Footer";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function SignUp() {
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language; 
   const dateInputRef = useRef(null);
-
   const navigate = useNavigate();
   const openDatePicker = () => {
     if (dateInputRef.current) {
-      dateInputRef.current.showPicker(); // Trigger the calendar
+      dateInputRef.current.showPicker(); 
     }
   };
 
-  const [userName, setUserName] = useState(""); 
-  const [email, setEmail] = useState(""); 
+  const [userName, setUserName] = useState("");
+  const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("+966");
   const [idNumber, setIdNumber] = useState("");
-  const [gender, setGender] = useState(""); // State to store selected value
+  const [gender, setGender] = useState(""); 
   const [date, setDate] = useState("");
 
-const onSubmit = () =>{
-  const fullPhoneNumber = `+966${phoneNumber}`
-  const data = {
-    userName:userName,
-    phoneNumber:fullPhoneNumber,
-    idNumber:idNumber,
-    gender:gender,
-    date:date
-  }
-  console.log("data",data)
-  navigate('/otp')
-}
-  
+  const onSubmit = () => {
+    const fullPhoneNumber = `+966${phoneNumber}`;
+    const data = {
+      userName: userName,
+      phoneNumber: fullPhoneNumber,
+      idNumber: idNumber,
+      gender: gender,
+      date: date,
+    };
+    console.log("data", data);
+    navigate("/otp");
+  };
+
   const handleChange = (event) => {
     setGender(event.target.value); // Update state on select change
   };
@@ -45,7 +47,7 @@ const onSubmit = () =>{
           <div className={styles.inputWrapperWithIcon}>
             <input
               type="text"
-              placeholder="اسم المستخدم"
+              placeholder={t("userName")}
               value={userName}
               onChange={(e) => setUserName(e.target.value)}
               className={styles.inputField}
@@ -77,7 +79,7 @@ const onSubmit = () =>{
           <div className={styles.inputWrapperWithIcon}>
             <input
               type="text"
-              placeholder="الإيميل"
+              placeholder={t("email")}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className={styles.inputField}
@@ -104,7 +106,7 @@ const onSubmit = () =>{
           </div>
 
           <div className={styles.inputContainer2}>
-            <div className={styles.inputWrapper}>        
+          {currentLanguage === "en" &&  <div className={styles.inputWrapper}>
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -125,11 +127,11 @@ const onSubmit = () =>{
                 </svg>
               </span>
               <span>+966</span>
-            </div>
+            </div>}
             <div className={styles.inputWrapperWithIcon}>
               <input
                 type="number"
-                placeholder="ر قم الجوال"
+                placeholder={t("phoneNumber")}
                 className={styles.inputField2}
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
@@ -159,12 +161,34 @@ const onSubmit = () =>{
                 />
               </svg>
             </div>
+            {currentLanguage === "ar" &&  <div className={styles.inputWrapper}>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  className={styles.arrowIcon}
+                >
+                  <path
+                    d="M19.9181 9.44156L13.3981 15.9616C12.6281 16.7316 11.3681 16.7316 10.5981 15.9616L4.07812 9.44156"
+                    stroke="#E8E8E8"
+                    strokeWidth="1.5"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+              <span>+966</span>
+            </div>}
           </div>
 
           <div className={styles.inputWrapperWithIcon}>
             <input
               type="number"
-              placeholder="رقم الهوية"
+              placeholder={t("idNumber")}
               value={idNumber}
               onChange={(e) => setIdNumber(e.target.value)}
               onWheel={(e) => e.preventDefault()}
@@ -192,25 +216,31 @@ const onSubmit = () =>{
               value={gender} // Bind state to the select value
               onChange={handleChange} // Handle change event
               className={styles.inputField} // Apply styles
+              style={{color:"E8E8E8"}}
             >
               <option value="" disabled hidden>
-                النوع
+                {t("gender")}
               </option>
-              <option value="male">َذكر</option>
-              <option value="female">انثى</option>
+              <option value="male">{t("male")}</option>
+              <option value="female">{t("female")}</option>
             </select>
             <div className={styles.inputIcon}>
-              <BsGenderFemale color="#8B8C8C" size={"40px"}  className={styles.genderIcon} />
+              <BsGenderFemale
+                color="#8B8C8C"
+                size={"40px"}
+                className={styles.genderIcon}
+              />
             </div>
           </div>
           <div className={styles.inputWrapperWithIcon}>
             <input
               type="date"
               value={date}
-              onChange={(e)=>setDate(e.target.value)}
-              placeholder="تاريخ الميلاد"
+              onChange={(e) => setDate(e.target.value)}
+              placeholder={t("dateOfBirth")}
               ref={dateInputRef}
               className={styles.inputField}
+              
             />
             <img
               src={myImage}
@@ -220,7 +250,9 @@ const onSubmit = () =>{
             />
           </div>
 
-          <div className={styles.onSubmit} onClick={onSubmit}>إرسال</div>
+          <div className={styles.onSubmit} onClick={onSubmit}>
+            إرسال
+          </div>
         </div>
       </div>
       {/* <Footer /> */}

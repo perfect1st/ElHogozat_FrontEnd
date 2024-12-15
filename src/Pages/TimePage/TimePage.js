@@ -138,7 +138,7 @@ const TimePage = () => {
       </div>
     <div className={styles.loginContainer}>
     <div className={styles.loginHeader}> الوقت</div>
-    <div className={styles.loginSecHeader}>الأقسام المميزة و المخصصة</div>
+    <div className={styles.loginSecHeader}>اختر من الأوقات المتاحة من مقدم الخدمة</div>
 
 
       </div>

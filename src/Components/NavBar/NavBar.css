@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  direction: rtl;
+  /* direction: rtl; */
   padding: 0 20px;
 }
 
@@ -60,7 +60,7 @@
   display: none; /* Show burger button */
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .nav-links{
     font-size: 14px;
   }
@@ -73,7 +73,7 @@
     height: 29px;
   }
 }
-@media (max-width: 880px) {
+@media (max-width: 940px) {
   .nav-links{
     font-size: 12px;
   }
@@ -88,7 +88,7 @@
 }
 
 
-@media (max-width: 780px) {
+@media (max-width: 850px) {
   .burger-button {
     display: block; /* Show burger button */
   }

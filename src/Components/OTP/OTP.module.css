@@ -14,15 +14,14 @@
 }
 .mainContainer{
   width: 996px;
-  height: 574px;
-  margin: auto;
+  height: auto;
+  margin: 30px auto;
   display: flex;
   flex-direction: column;
 }
 .enterOtpLapel{
   font-size: 32px;
   font-weight: 600;
-  direction: rtl;
   /* margin-right: 20%; */
   color: #3D3D3D;
   padding: 0 20px 0 0;
@@ -30,13 +29,11 @@
 .mobileNumberContainer{
   /* margin-right: 20%; */
   display: flex;
-  direction: rtl;
   margin-bottom: 20px;
 }
 .mobileNumber{
   font-size: 24px;
   font-weight: 500;
-  direction: rtl;
   color: #3D3D3D;
   padding: 0 20px 0 0;
   /* margin-right: 20%; */
@@ -45,7 +42,6 @@
 .editNumber{
   font-size: 24px;
   font-weight: 500;
-  direction: rtl;
   color: #0066BA;
   text-decoration: underline;
   cursor: pointer;
@@ -60,7 +56,7 @@
   border: 2px solid #D1D1D1;
   width: 716px;
   height: 112px;
-  margin: auto;
+  margin: 30px auto;
   border-radius: 8px;
 }
 

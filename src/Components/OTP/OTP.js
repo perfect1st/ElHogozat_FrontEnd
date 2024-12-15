@@ -2,8 +2,11 @@ import React, { useState, useRef, useEffect } from 'react';
 import styles from './OTP.module.css'; 
 import { useNavigate } from 'react-router-dom'; 
 import Footer from '../Footer/Footer'
+import { useTranslation } from "react-i18next";
 
 const OTP = () => {
+    const { t, i18n } = useTranslation();
+    const currentLanguage = i18n.language; 
   const [otp, setOtp] = useState(['', '', '', '']);
   const navigate = useNavigate(); 
   const [time, setTime] = useState(180); // 3 minutes in seconds
@@ -68,10 +71,10 @@ const OTP = () => {
   return (
     <div>
     <div  className={styles.mainContainer} >
-      <div  className={styles.enterOtpLapel} >إدخل الرقم المرسل</div>
+      <div  className={styles.enterOtpLapel} >{t("EnterTheSentNumber")}</div>
       <div  className={styles.mobileNumberContainer} >
         <div className={styles.mobileNumber}>+966 1231231231</div>
-        <div className={styles.editNumber} onClick={handleNavigateToLogin}>تعديل الرقم</div>
+        <div className={styles.editNumber} onClick={handleNavigateToLogin}>{t("EditNumber")}</div>
          </div>
  <div className={styles.otpContainer}>
       {otp.map((digit, index) => (
@@ -90,7 +93,7 @@ const OTP = () => {
 
     <div  className={styles.mobileNumberContainer} >
         <div className={styles.mobileNumber}>{formatTime(time)} </div>
-        <div className={styles.editNumber} disabled={isResendDisabled}   style={{cursor: isResendDisabled ? 'not-allowed' : 'pointer', }} onClick={handleResendClick} >إعادة الإرسال</div>
+        <div className={styles.editNumber} disabled={isResendDisabled}   style={{cursor: isResendDisabled ? 'not-allowed' : 'pointer', }} onClick={handleResendClick} >{t("SendAgain")}</div>
          </div>
          <div className={styles.onSubmit} onClick={()=>{navigate('/home')}} >إرسال</div>
 

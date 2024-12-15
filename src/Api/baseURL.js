@@ -7,7 +7,7 @@ const baseURL=axios.create({baseURL:"https://takafula.com/"});
 
 export const config={
     headers:{
-        Authorization:`Bearer ${localStorage.getItem("token")}`,
+        Authorization:`Bearer ${localStorage.getItem("reservation_token")}`,
         isAdminUser:`${isAdmin}`
     }
 };

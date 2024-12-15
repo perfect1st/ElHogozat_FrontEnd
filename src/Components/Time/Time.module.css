@@ -159,3 +159,86 @@
 .arrowButton:hover {
   background-color: #ddd;
 }
+
+
+
+
+/* Time */
+
+.customRadio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.customRadio input {
+  display: none; /* Hide the native radio input */
+}
+
+.customRadio span {
+  width: 20px;
+  height: 20px;
+  padding: 20px;
+  border: 1px solid #000; /* Border color */
+  border-radius: 0; /* Square shape */
+  box-sizing: content-box;
+  position: relative;
+}
+
+.customRadio input:checked + span {
+  background-color: #007bff; /* Color when selected */
+  border-color: #007bff;
+}
+
+.customRadio input:checked + span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #fff; /* Inner color */
+}
+.TimeComponant{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+.TimeBox{
+  width: 196.5px;
+  background: #E8E8E8;
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+
+
+@media (max-width: 940px) {
+.mainContainer{
+  width: 641.2px;
+}
+.years{
+  width: 600px;
+}
+.button {
+  flex: 0 0 60px; /* Fixed button size */
+}
+.buttonDays {
+  flex: 0 0 40px; /* Fixed button size */
+
+}
+}
+@media (max-width: 670px) {
+.mainContainer{
+  width: 600px;
+}
+.years{
+  width: 420px;
+}
+}

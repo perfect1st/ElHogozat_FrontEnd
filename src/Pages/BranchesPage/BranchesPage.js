@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Branches from '../../Components/Branches/Branches'
 import styles from '../../Components/Branches/Branches.module.css'; 
 import SearchComponent from '../../Components/Utilities/SearchComponent'
+import { useTranslation } from "react-i18next";
 
 const branches = [
   {
@@ -98,6 +99,7 @@ const branches = [
 
 
 const BranchesPage = () => {
+      const { t, i18n } = useTranslation();
 
   const [selectedOption, setSelectedOption] = useState(null);
 

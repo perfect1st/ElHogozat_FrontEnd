@@ -1,0 +1,26 @@
+{
+  "login": "تسجيل الدخول",
+  "phoneNumber":"ر قم الجوال",
+  "send":"ارسال",
+"signUp": "تسجيل جديد",
+  "home": "الرئيسية",
+  "sections": "الاقسام",
+  "packages": "الباقات",
+  "myBookings": "حجوزاتي",
+  "profile": "الصفحه الشخصيه",
+  "contactUs": "تواصل معنا",
+  "termsAndConditions": "الشروط والاحكام",
+  "userName":"اسم المستخدم",
+  "email":"الإيميل",
+  "idNumber":"رقم الهوية",
+  "gender":"النوع",
+  "male":"ذكر",
+  "female":"انثى",
+  "dateOfBirth":"تاريخ الميلاد",
+  "OTP":"الرقم المتغير",
+  "EnterTheSentNumber":"إدخل الرقم المرسل",
+  "EditNumber":"تعديل الرقم",
+  "SendAgain":"إعادة الإرسال",
+  "Branches":"الفروع"
+
+}
